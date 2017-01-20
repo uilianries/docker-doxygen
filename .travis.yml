@@ -5,7 +5,6 @@ services:
 
 before_install:
   - docker build -t uilianries/docker-doxygen .
-  - docker ps -a
 
 script:
-  - doxygen --version
+  - docker run -d uilianries/docker-doxygen /bin/ash -c "doxygen --version"
