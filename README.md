@@ -1,2 +1,6 @@
-# docker-doxygen
-Docker Image for Doxygen client
+# Docker Doxygen
+
+## Docker Image for Doxygen client
+
+#### LICENSE
+[MIT](LICENSE)

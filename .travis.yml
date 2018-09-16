@@ -1,10 +1,16 @@
 sudo: required
 
+language: python
+
 services:
   - docker
 
-before_install:
-  - docker build -t uilianries/docker-doxygen .
+env:
+  global:
+    - DOCKER_UPLOAD="TRUE"
+
+  matrix:
+    - DOCKER_SERVICE="doxygen"
 
 script:
-  - docker run -d uilianries/docker-doxygen /bin/ash -c "doxygen --version"
+  - python scripts/run.py

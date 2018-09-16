@@ -1,0 +1,5 @@
+version: '3'
+services:
+  doxygen:
+    build: .
+    image: uilianries/doxygen:1.8.13
